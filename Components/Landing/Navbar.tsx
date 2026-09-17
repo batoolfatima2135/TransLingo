@@ -111,10 +111,14 @@ function AuthenticatedActions({
       name?: string | null;
       email?: string | null;
       image?: string | null;
+      firstName?: string | null;
+      lastName?: string | null;
     };
   };
 }) {
-  const name = session.user?.name;
+  const name =
+    session.user?.name ||
+    `${session.user?.firstName} ${session.user?.lastName}`;
   const email = session.user?.email;
 
   return (
