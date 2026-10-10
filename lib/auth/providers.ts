@@ -1,7 +1,7 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 
-import { loginWithCredentials } from "./backend-auth";
+import { loginWithCredentials } from "../../services/auth.service";
 
 export const authProviders = [
   GoogleProvider({
