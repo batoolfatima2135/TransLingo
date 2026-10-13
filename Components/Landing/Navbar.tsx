@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Languages, LogOut } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
 import { useEffect } from "react";
+import Logo from "../logo";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
@@ -33,15 +34,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-indigo-100/60 bg-white/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900"
-        >
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-600 text-white shadow-sm shadow-indigo-200">
-            <Languages size={19} />
-          </div>
-          TransLingo
-        </Link>
+        <Logo />
         <button onClick={callBackend}>Test Backend</button>
         {/* Navigation */}
         {/* Navigation */}
@@ -95,7 +88,7 @@ function GuestActions() {
 
       <Link
         href="/register"
-        className="rounded-lg bg-cyan-700 px-4 py-2 text-sm font-medium text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700"
+        className="rounded-lg bg-cyan-700 px-4 py-2 text-sm font-medium text-white  bg-gradient-to-r from-teal-700 to-cyan-700 px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-teal-700/20 transition duration-200 hover:-translate-y-0.5 hover:from-teal-800 hover:to-cyan-800 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-600/20 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
       >
         Get started
       </Link>
