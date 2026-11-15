@@ -1,6 +1,5 @@
+import { loginWithGoogle } from "@/services/auth/loginWithGoogle";
 import type { JWT } from "next-auth/jwt";
-
-import { loginWithGoogle } from "../../../services/auth.service";
 
 export async function handleGoogleLogin(
   token: JWT,
