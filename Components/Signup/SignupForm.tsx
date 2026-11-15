@@ -206,7 +206,8 @@ export default function SignupForm() {
               </div>
 
               <p className="mt-2 text-xs text-slate-500">
-                Use at least 8 characters.
+                Use at least 8 characters with one Uppercase letter, one
+                lowercase letter, and one number.
               </p>
             </div>
 
