@@ -10,7 +10,6 @@ export interface RegisterRequest {
 }
 
 export async function registerUser(data: RegisterRequest): Promise<void> {
-  console.log("Registering user with data:", data);
   await apiPublic<void>(API_ENDPOINTS.AUTH.REGISTER, {
     method: "POST",
     body: JSON.stringify({
