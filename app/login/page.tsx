@@ -13,27 +13,29 @@ export default async function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-sm">
-        <div className="mb-8 text-center">
-          <h1 className="text-2xl font-semibold text-gray-900">TransLingo</h1>
-          <p className="mt-2 text-sm text-gray-500">
-            Melde dich an, um mit dem Übersetzen zu starten.
+      <div className="w-full max-w-md rounded-2xl bg-white p-8 shadow-sm">
+        <div className="mb-8 mt-8">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">
+            Your words, understood
           </p>
-        </div>
 
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            Sign in to start translating.
+          </h1>
+        </div>
         <GoogleSignInButton />
         <CredentialsLoginForm />
 
         <p className="mt-6 text-center text-xs text-gray-400">
-          Mit der Anmeldung stimmst du unseren
+          By signing in, you agree to our{" "}
           <a href="/terms" className="underline hover:text-gray-600">
-            Nutzungsbedingungen
-          </a>
-          und der
+            Terms of Service
+          </a>{" "}
+          and{" "}
           <a href="/privacy" className="underline hover:text-gray-600">
-            Datenschutzerklärung
+            Privacy Policy
           </a>
-          zu.
+          .
         </p>
       </div>
     </div>
