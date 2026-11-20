@@ -1,32 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Languages, LogOut } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { signOut, useSession } from "next-auth/react";
-import { useEffect } from "react";
 import Logo from "../logo";
 
 export default function Navbar() {
   const { data: session, status } = useSession();
-  useEffect(() => {
-    console.log("SESSION:", session);
-  }, [session]);
-  const callBackend = async () => {
-    if (!session?.accessToken) {
-      console.log("No access token");
-      return;
-    }
 
-    const response = await fetch("http://localhost:5127/api/test/protected", {
-      headers: {
-        Authorization: `Bearer `,
-      },
-    });
-
-    const data = await response.json();
-
-    console.log("BACKEND RESPONSE:", data);
-  };
   const isLoading = status === "loading";
   const isAuthenticated = !!session;
 
@@ -35,7 +16,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <Logo />
-        <button onClick={callBackend}>Test Backend</button>
+
         {/* Navigation */}
         {/* Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
