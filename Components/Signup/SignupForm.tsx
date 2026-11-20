@@ -74,7 +74,7 @@ export default function SignupForm() {
   const labelClasses = "mb-2 block text-sm font-medium text-slate-700";
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-teal-50 via-white to-indigo-50 px-4 py-12 sm:px-6">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-linear-to-br from-teal-50 via-white to-indigo-50 px-4 py-12 sm:px-6">
       <section className="relative w-full max-w-lg">
         <div className="rounded-3xl border border-white/80 bg-white/90 p-6 shadow-xl shadow-slate-200/60 backdrop-blur sm:p-10">
           {/* Heading */}
@@ -225,7 +225,7 @@ export default function SignupForm() {
             <button
               type="submit"
               disabled={loading}
-              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-teal-700 to-cyan-700 px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-teal-700/20 transition duration-200 hover:-translate-y-0.5 hover:from-teal-800 hover:to-cyan-800 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-600/20 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-teal-700 to-cyan-700 px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-teal-700/20 transition duration-200 hover:-translate-y-0.5 hover:from-teal-800 hover:to-cyan-800 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-600/20 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
             >
               {loading ? "Creating your account..." : "Create account"}
 
