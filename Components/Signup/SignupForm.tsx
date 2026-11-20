@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
-import Logo from "../logo";
+import GoogleSignInButton from "../Login/googleSignInButton";
 
 export default function SignupForm() {
   const router = useRouter();
@@ -91,7 +91,18 @@ export default function SignupForm() {
               Join TransLingo and make every translation count.
             </p>
           </div>
+          {/* Google Sign Up */}
+          <div className="mb-6">
+            <GoogleSignInButton />
 
+            <div className="my-6 flex items-center gap-4">
+              <div className="h-px flex-1 bg-slate-200" />
+              <span className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                Or register with email
+              </span>
+              <div className="h-px flex-1 bg-slate-200" />
+            </div>
+          </div>
           {/* Error message */}
           {error && (
             <div
