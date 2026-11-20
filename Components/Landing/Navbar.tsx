@@ -69,7 +69,7 @@ function GuestActions() {
 
       <Link
         href="/register"
-        className="rounded-lg bg-cyan-700 px-4 py-2 text-sm font-medium text-white  bg-gradient-to-r from-teal-700 to-cyan-700 px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-teal-700/20 transition duration-200 hover:-translate-y-0.5 hover:from-teal-800 hover:to-cyan-800 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-600/20 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
+        className="rounded-lg bg-cyan-700 py-2 text-sm font-medium text-white  bg-linear-to-r from-teal-700 to-cyan-700 px-4 shadow-lg shadow-teal-700/20 transition duration-200 hover:-translate-y-0.5 hover:from-teal-800 hover:to-cyan-800 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-600/20 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
       >
         Get started
       </Link>
